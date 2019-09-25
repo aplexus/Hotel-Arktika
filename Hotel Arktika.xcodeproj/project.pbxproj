@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		5BB46204233B53D7003E2321 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB46203233B53D7003E2321 /* AppDelegate.swift */; };
 		5BB46206233B53D7003E2321 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB46205233B53D7003E2321 /* SceneDelegate.swift */; };
-		5BB46208233B53D7003E2321 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB46207233B53D7003E2321 /* ViewController.swift */; };
 		5BB4620B233B53D7003E2321 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB46209233B53D7003E2321 /* Main.storyboard */; };
 		5BB4620D233B53D8003E2321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB4620C233B53D8003E2321 /* Assets.xcassets */; };
-		5BB46210233B53D8003E2321 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB4620E233B53D8003E2321 /* LaunchScreen.storyboard */; };
+		5BB46218233B546F003E2321 /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB46217233B546F003E2321 /* registration.swift */; };
+		5BB4621A233B573F003E2321 /* RegistrationFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB46219233B573F003E2321 /* RegistrationFormTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5BB46200233B53D7003E2321 /* Hotel Arktika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hotel Arktika.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB46203233B53D7003E2321 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BB46205233B53D7003E2321 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BB46207233B53D7003E2321 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5BB4620A233B53D7003E2321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BB4620C233B53D8003E2321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BB4620F233B53D8003E2321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BB46211233B53D8003E2321 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BB46217233B546F003E2321 /* registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registration.swift; sourceTree = "<group>"; };
+		5BB46219233B573F003E2321 /* RegistrationFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFormTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +58,37 @@
 			children = (
 				5BB46203233B53D7003E2321 /* AppDelegate.swift */,
 				5BB46205233B53D7003E2321 /* SceneDelegate.swift */,
-				5BB46207233B53D7003E2321 /* ViewController.swift */,
-				5BB46209233B53D7003E2321 /* Main.storyboard */,
+				5BB4621C233B57FE003E2321 /* Model */,
+				5BB4621D233B5812003E2321 /* View */,
+				5BB4621E233B5825003E2321 /* Controller */,
 				5BB4620C233B53D8003E2321 /* Assets.xcassets */,
-				5BB4620E233B53D8003E2321 /* LaunchScreen.storyboard */,
 				5BB46211233B53D8003E2321 /* Info.plist */,
 			);
 			path = "Hotel Arktika";
+			sourceTree = "<group>";
+		};
+		5BB4621C233B57FE003E2321 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BB46217233B546F003E2321 /* registration.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BB4621D233B5812003E2321 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BB46209233B53D7003E2321 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BB4621E233B5825003E2321 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BB46219233B573F003E2321 /* RegistrationFormTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +149,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB46210233B53D8003E2321 /* LaunchScreen.storyboard in Resources */,
 				5BB4620D233B53D8003E2321 /* Assets.xcassets in Resources */,
 				5BB4620B233B53D7003E2321 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB46208233B53D7003E2321 /* ViewController.swift in Sources */,
 				5BB46204233B53D7003E2321 /* AppDelegate.swift in Sources */,
 				5BB46206233B53D7003E2321 /* SceneDelegate.swift in Sources */,
+				5BB4621A233B573F003E2321 /* RegistrationFormTableViewController.swift in Sources */,
+				5BB46218233B546F003E2321 /* registration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,14 +177,6 @@
 				5BB4620A233B53D7003E2321 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5BB4620E233B53D8003E2321 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BB4620F233B53D8003E2321 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
