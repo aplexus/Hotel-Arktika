@@ -325,6 +325,9 @@
                                                     <state key="normal" title="не выбрано">
                                                         <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="Ylo-Vq-WRw" kind="show" id="hkU-9U-YSI"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -385,6 +388,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnD-3E-tbm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-599" y="159"/>
+        </scene>
+        <!--Bed Choice Table View Controller-->
+        <scene sceneID="0yR-Vt-aCw">
+            <objects>
+                <tableViewController id="Ylo-Vq-WRw" customClass="BedChoiceTableViewController" customModule="Reg" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ngj-zc-xWW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="s7P-Ax-ORb">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s7P-Ax-ORb" id="Pcf-wd-dsa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Bed Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cou-zA-56t">
+                                            <rect key="frame" x="16" y="11" width="343" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="cou-zA-56t" secondAttribute="bottom" id="Tzw-58-ynj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cou-zA-56t" secondAttribute="trailing" id="fSk-vN-AVy"/>
+                                        <constraint firstItem="cou-zA-56t" firstAttribute="top" secondItem="Pcf-wd-dsa" secondAttribute="topMargin" id="pGQ-WQ-mzR"/>
+                                        <constraint firstItem="cou-zA-56t" firstAttribute="leading" secondItem="Pcf-wd-dsa" secondAttribute="leadingMargin" id="y9G-gH-Jdp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dMU-e5-eRK">
+                                <rect key="frame" x="0.0" y="71.5" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dMU-e5-eRK" id="HWZ-Aj-tVg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two Bed Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jv7-Hk-h5W">
+                                            <rect key="frame" x="16" y="11" width="343" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Jv7-Hk-h5W" firstAttribute="top" secondItem="HWZ-Aj-tVg" secondAttribute="topMargin" id="GA0-iZ-7Nh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Jv7-Hk-h5W" secondAttribute="trailing" id="Jsg-1l-3Ch"/>
+                                        <constraint firstItem="Jv7-Hk-h5W" firstAttribute="leading" secondItem="HWZ-Aj-tVg" secondAttribute="leadingMargin" id="OJV-C6-Rgt"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Jv7-Hk-h5W" secondAttribute="bottom" id="ome-I7-iSl"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1av-Hv-7jf">
+                                <rect key="frame" x="0.0" y="115" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1av-Hv-7jf" id="VZa-Ob-5ZR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three Bed Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tup-Av-A0m">
+                                            <rect key="frame" x="16" y="11" width="343" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tup-Av-A0m" secondAttribute="trailing" id="AMp-df-HGn"/>
+                                        <constraint firstItem="tup-Av-A0m" firstAttribute="top" secondItem="VZa-Ob-5ZR" secondAttribute="topMargin" id="WSj-tZ-jyb"/>
+                                        <constraint firstItem="tup-Av-A0m" firstAttribute="leading" secondItem="VZa-Ob-5ZR" secondAttribute="leadingMargin" id="Xch-5K-Rfp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tup-Av-A0m" secondAttribute="bottom" id="wGU-0I-4F7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ylo-Vq-WRw" id="FPg-Wh-lV9"/>
+                            <outlet property="delegate" destination="Ylo-Vq-WRw" id="JdK-d7-Bje"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="5qK-tc-5mq"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fC-24-8IH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="152.47376311844079"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KcV-je-kIg">
