@@ -18,9 +18,13 @@ class RegistrationFormTableViewController: UITableViewController {
     @IBOutlet weak var checkOutDateLabel: UILabel!
     @IBOutlet weak var checkOutDatePicker: UIDatePicker!
     
+    @IBOutlet weak var numberOfAdults: UIStepper!
+    @IBOutlet weak var numberOfChildrens: UIStepper!
+    @IBOutlet weak var countOfAdults: UILabel!
+    @IBOutlet weak var countOfChildrensLabel: UILabel!
     let checkInDatePickerIndexPath = IndexPath (row: 1, section: 1)
     let checkOutDatePickerIndexPath = IndexPath (row: 3, section: 1)
-    
+    var priceForWifi = 0
     var isCheckInDatePickerShown: Bool = false {
         didSet {
             chekInDatePicker.isHidden = !isCheckInDatePickerShown
@@ -58,18 +62,44 @@ class RegistrationFormTableViewController: UITableViewController {
         let email = emailTextField.text ?? ""
         let checkInDate = chekInDatePicker.date
         let checkOutDate = checkOutDatePicker.date
+        let numberOfadults = countOfAdults.text ?? ""
+        let numberOfChildrens = countOfChildrensLabel.text ?? ""
         
         
-        print (#function)
         print ("First Name:", firstName)
         print ("Last Name:", lastName)
         print ("E-mail:", email)
         print ("Check-In:", checkInDate)
         print ("Check-Out:", checkOutDate)
+        print ("Количество взрослых:", numberOfadults)
+        print ("Количество детей:", numberOfChildrens)
+        updateWifi ()
+        
     }
     
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         updateDateViews()
+    }
+    
+    
+    @IBAction func StepperOfAdults(_ sender: Any) {
+        countOfAdults.text = String (Int(numberOfAdults.value))
+    }
+    @IBAction func stepperOfChildrens(_ sender: UIStepper) {
+        countOfChildrensLabel.text = String( Int(numberOfChildrens.value))
+    }
+    
+    @IBAction func switchOfWifi(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            priceForWifi = 10
+        } else {
+            priceForWifi = 0
+    }
+    }
+    func updateWifi (){
+        if priceForWifi == 10 {
+            print ("Стоимость за wifi составляет: \(priceForWifi) $")
+    }
     }
     // MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
